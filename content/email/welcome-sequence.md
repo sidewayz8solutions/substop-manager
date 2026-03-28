@@ -15,7 +15,7 @@ Here's how to get started:
 Most users find $100-300 in forgotten subscriptions within the first week.
 
 Ready to save money?
-[Open Dashboard]
+[Open Dashboard - https://substop.tech]
 
 Best,
 The SubStop-Manager Team
@@ -37,7 +37,7 @@ One user saved $400/month by canceling 8 unused subscriptions.
 
 How much will you save?
 
-[Check Your Subscriptions]
+[Check Your Subscriptions - https://substop.tech]
 
 ---
 

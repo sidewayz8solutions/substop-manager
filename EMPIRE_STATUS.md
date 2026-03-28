@@ -4,8 +4,8 @@
 
 | Resource | URL | Status |
 |----------|-----|--------|
-| **Landing Page** | https://skillboss-p8e7s3oh-preview.heyboss.live | ✅ LIVE |
-| **Domain** | substop.tech | 🔄 Configure DNS |
+| **Landing Page** | https://substop.tech | ✅ LIVE |
+| **Domain** | https://substop.tech | ✅ LIVE |
 | **iOS App** | https://apps.apple.com/us/app/substop-private-sub-tracker/id6759779894 | ✅ LIVE |
 
 ---
@@ -208,9 +208,9 @@ substop-manager/
 
 ## 🎉 YOU'RE LAUNCHED!
 
-**Landing Page:** https://skillboss-p8e7s3oh-preview.heyboss.live
+**Landing Page:** https://substop.tech ✅ LIVE
 
-**Domain:** substop.tech (configure DNS to point to landing page)
+**Domain:** https://substop.tech ✅ LIVE
 
 **iOS App:** Available on App Store
 

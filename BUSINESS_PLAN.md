@@ -8,7 +8,7 @@
 Transform SubStop from a simple iOS app into a **comprehensive subscription management platform** that helps people take control of their recurring expenses across all their devices.
 
 **New Name:** SubStop-Manager  
-**Domain:** substop.tech  
+**Domain:** https://substop.tech ✅ LIVE  
 **Tagline:** "Take Control of Your Subscriptions"
 
 ---
