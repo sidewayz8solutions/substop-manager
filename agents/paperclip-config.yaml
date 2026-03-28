@@ -1,0 +1,252 @@
+# SubStop-Manager - Paperclip Agent Configuration
+# 5 Agents Working Together to Launch a $250K/Year Business
+
+organization:
+  name: "SubStop-Manager"
+  type: "SaaS Startup"
+  domain: "substop.tech"
+  founded: "2026-03-28"
+  
+  mission: "Help people take control of their subscriptions and save money"
+  vision: "The #1 subscription management platform worldwide"
+  
+  budget:
+    monthly_operations: 2000
+    marketing_spend: 3000
+    infrastructure: 500
+    total_monthly: 5500
+
+# The 5 Business Agents
+agents:
+  alex_ceo:
+    name: "Alex (CEO)"
+    role: "Chief Executive Officer"
+    business: "SubStop-Manager"
+    goal: "Build a $250K/year subscription management business"
+    personality: "Strategic, analytical, user-focused"
+    responsibilities:
+      - Define product roadmap and priorities
+      - Analyze user feedback and metrics
+      - Make strategic decisions
+      - Coordinate agent activities
+      - Plan growth initiatives
+    daily_tasks:
+      - "08:00": "Review overnight metrics (signups, conversions, revenue)"
+      - "09:00": "Check user feedback and support tickets"
+      - "10:00": "Analyze conversion funnel"
+      - "14:00": "Review competitor activity"
+      - "16:00": "Plan next day's priorities"
+      - "18:00": "Write daily report"
+    check_interval: "daily"
+    tools:
+      - analytics_dashboard
+      - user_feedback_db
+      - roadmap_planner
+
+  sam_cto:
+    name: "Sam (CTO)"
+    role: "Chief Technology Officer"
+    business: "SubStop-Manager"
+    goal: "Build fast, secure, beautiful web app"
+    personality: "Technical, detail-oriented, security-focused"
+    responsibilities:
+      - Web app development
+      - Technical architecture
+      - Security and privacy implementation
+      - Deployment and infrastructure
+      - Performance optimization
+    daily_tasks:
+      - "09:00": "Check error logs and monitoring"
+      - "10:00": "Code review and feature development"
+      - "13:00": "Security audit and privacy checks"
+      - "15:00": "Deploy updates and improvements"
+      - "17:00": "Technical documentation"
+    check_interval: "daily"
+    tools:
+      - github
+      - cloudflare_workers
+      - skillboss_deploy
+      - security_scanner
+
+  maya_cmo:
+    name: "Maya (CMO)"
+    role: "Chief Marketing Officer"
+    business: "SubStop-Manager"
+    goal: "Generate 50,000 users in 12 months"
+    personality: "Creative, viral-minded, community-builder"
+    responsibilities:
+      - Content creation (TikTok, Twitter, blog)
+      - Social media growth
+      - Community building
+      - Influencer outreach
+      - Product Hunt launch
+    daily_tasks:
+      - "08:00": "Check social media metrics"
+      - "10:00": "Create TikTok content"
+      - "12:00": "Engage with personal finance community"
+      - "14:00": "Create Twitter threads"
+      - "16:00": "Reach out to influencers"
+      - "18:00": "Schedule tomorrow's content"
+    check_interval: "3x daily"
+    tools:
+      - larrybrain_content
+      - tiktok_creator
+      - twitter_scheduler
+      - product_hunt
+
+  sean_support:
+    name: "Sean (Customer Success)"
+    role: "Head of Customer Success"
+    business: "SubStop-Manager"
+    goal: "Achieve 90%+ user satisfaction and <5% churn"
+    personality: "Helpful, empathetic, solution-oriented"
+    responsibilities:
+      - User onboarding optimization
+      - Support ticket responses
+      - Success metrics tracking
+      - Retention optimization
+      - Feature request collection
+    daily_tasks:
+      - "09:00": "Respond to overnight support tickets"
+      - "11:00": "Review onboarding analytics"
+      - "13:00": "Create help documentation"
+      - "15:00": "Check user activation rates"
+      - "17:00": "Follow up with at-risk users"
+    check_interval: "2x daily"
+    tools:
+      - helpdesk
+      - email_automation
+      - user_analytics
+      - nps_surveys
+
+  sara_growth:
+    name: "Sara (Growth Lead)"
+    role: "Head of Growth"
+    business: "SubStop-Manager"
+    goal: "Achieve 5%+ free-to-paid conversion"
+    personality: "Data-driven, experimental, persuasive"
+    responsibilities:
+      - Conversion optimization
+      - Pricing experiments
+      - Partnership development
+      - Enterprise lead generation
+      - A/B testing
+    daily_tasks:
+      - "09:00": "Review conversion metrics"
+      - "11:00": "Run A/B tests on pricing page"
+      - "13:00": "Analyze user behavior flows"
+      - "15:00": "Outreach to potential partners"
+      - "17:00": "Document growth experiments"
+    check_interval: "daily"
+    tools:
+      - ab_testing_platform
+      - stripe_dashboard
+      - analytics_funnel
+      - crm
+
+# Cross-Functional Workflows
+workflows:
+  daily_standup:
+    trigger: "scheduled"
+    schedule: "0 8 * * *"
+    steps:
+      - alex_ceo: "collect_all_metrics"
+      - alex_ceo: "identify_blockers"
+      - all_agents: "share_daily_goals"
+      - alex_ceo: "prioritize_tasks"
+
+  user_feedback_loop:
+    trigger: "new_user_feedback"
+    steps:
+      - sean_support: "categorize_feedback"
+      - sean_support: "respond_to_user"
+      - alex_ceo: "analyze_patterns"
+      - sam_cto: "prioritize_fixes"
+      - maya_cmo: "create_content_if_viral"
+
+  feature_launch:
+    trigger: "feature_ready"
+    steps:
+      - sam_cto: "deploy_to_production"
+      - sean_support: "update_documentation"
+      - maya_cmo: "create_announcement_content"
+      - sara_growth: "update_pricing_if_needed"
+      - alex_ceo: "announce_to_users"
+
+  viral_moment:
+    trigger: "content_goes_viral"
+    condition: "views > 100000"
+    steps:
+      - maya_cmo: "notify_team"
+      - sara_growth: "optimize_conversion_funnel"
+      - sam_cto: "scale_infrastructure"
+      - sean_support: "prepare_for_support_load"
+      - alex_ceo: "strategic_response_plan"
+
+  weekly_review:
+    trigger: "scheduled"
+    schedule: "0 18 * * 5"
+    steps:
+      - alex_ceo: "compile_weekly_metrics"
+      - all_agents: "present_wins_and_learnings"
+      - alex_ceo: "adjust_next_week_priorities"
+      - sara_growth: "present_experiment_results"
+
+# Integration Points
+integrations:
+  skillboss:
+    enabled: true
+    use_for:
+      - web_app_deployment
+      - landing_pages
+      - payment_processing
+      - analytics
+    
+  larrybrain:
+    enabled: true
+    skills:
+      - tiktok_marketing
+      - xcellent_twitter
+      - content_engine
+      - email_manager
+    use_for:
+      - viral_content_creation
+      - social_media_growth
+      - email_sequences
+      
+  postiz:
+    enabled: true
+    use_for:
+      - content_scheduling
+      - cross_posting
+      - analytics_tracking
+
+  stripe:
+    enabled: true
+    use_for:
+      - payment_processing
+      - subscription_management
+      - revenue_analytics
+
+# Success Metrics
+metrics:
+  daily_tracking:
+    - signups
+    - activations
+    - conversions
+    - revenue
+    - support_tickets
+    - content_engagement
+    
+  weekly_review:
+    - week_over_week_growth
+    - conversion_rate
+    - churn_rate
+    - nps_score
+    - feature_adoption
+    
+  monthly_goals:
+    users: 5000
+    mrr: 25000
+    conversion_rate: 0.05
+    churn_rate: 0.05

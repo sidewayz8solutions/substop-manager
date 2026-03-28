@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "substop-manager",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

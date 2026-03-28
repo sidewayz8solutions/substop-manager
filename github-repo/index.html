@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubStop-Manager | Take Control of Your Subscriptions</title>
+  <meta name="description" content="The privacy-first subscription manager. No bank linking required. Track, manage, and cancel subscriptions. Save $200+/month.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #10b981;
+      --primary-dark: #059669;
+      --secondary: #3b82f6;
+      --dark: #0f172a;
+      --gray: #64748b;
+      --light: #f8fafc;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    
+    header { padding: 20px 0; background: white; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 24px; font-weight: 800; color: var(--primary); }
+    .nav-links { display: flex; gap: 32px; align-items: center; }
+    .nav-links a { color: var(--gray); text-decoration: none; font-weight: 500; }
+    .btn { padding: 12px 24px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; display: inline-block; border: none; cursor: pointer; }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .btn-outline { background: transparent; color: var(--dark); border: 2px solid #e2e8f0; }
+    
+    .hero { padding: 100px 0 80px; text-align: center; background: linear-gradient(180deg, white 0%, var(--light) 100%); }
+    .hero h1 { font-size: 56px; font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
+    .hero h1 span { color: var(--primary); }
+    .hero p { font-size: 20px; color: var(--gray); max-width: 600px; margin: 0 auto 40px; }
+    .hero-buttons { display: flex; gap: 16px; justify-content: center; margin-bottom: 60px; }
+    .hero-stats { display: flex; justify-content: center; gap: 60px; margin-top: 40px; }
+    .stat h3 { font-size: 36px; font-weight: 800; color: var(--primary); }
+    .stat p { color: var(--gray); font-size: 14px; }
+    
+    .features { padding: 100px 0; background: white; }
+    .features h2 { text-align: center; font-size: 40px; margin-bottom: 60px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .feature { padding: 40px 32px; border-radius: 16px; background: var(--light); text-align: center; }
+    .feature-icon { width: 64px; height: 64px; background: var(--primary); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 28px; }
+    .feature h3 { font-size: 20px; margin-bottom: 12px; }
+    .feature p { color: var(--gray); font-size: 16px; }
+    
+    .pricing { padding: 100px 0; background: var(--light); }
+    .pricing h2 { text-align: center; font-size: 40px; margin-bottom: 60px; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+    .pricing-card { padding: 40px 32px; border-radius: 20px; background: white; border: 2px solid #e2e8f0; text-align: center; }
+    .pricing-card.featured { border-color: var(--primary); box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); }
+    .pricing-card h3 { font-size: 20px; margin-bottom: 8px; }
+    .price { font-size: 48px; font-weight: 800; margin-bottom: 8px; }
+    .price span { font-size: 16px; font-weight: 500; color: var(--gray); }
+    .features-list { list-style: none; margin: 32px 0; text-align: left; }
+    .features-list li { padding: 8px 0; padding-left: 28px; position: relative; }
+    .features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--primary); font-weight: bold; }
+    .badge { display: inline-block; padding: 4px 12px; background: var(--primary); color: white; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 16px; }
+    
+    .cta { padding: 100px 0; text-align: center; background: var(--dark); color: white; }
+    .cta h2 { font-size: 40px; margin-bottom: 20px; }
+    .cta p { color: #94a3b8; font-size: 18px; margin-bottom: 40px; }
+    
+    footer { padding: 40px 0; text-align: center; color: var(--gray); background: white; border-top: 1px solid #e2e8f0; }
+    
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+      .feature-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .hero-stats { flex-direction: column; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">SubStop-Manager</div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#" class="btn btn-outline">Log In</a>
+        <a href="#pricing" class="btn btn-primary">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Take Control of Your <span>Subscriptions</span></h1>
+      <p>The privacy-first way to track and manage your recurring expenses. No bank linking required. Save $200+ per month.</p>
+      <div class="hero-buttons">
+        <a href="#pricing" class="btn btn-primary" style="padding: 16px 32px; font-size: 18px;">Start Saving Today</a>
+        <a href="#features" class="btn btn-outline" style="padding: 16px 32px; font-size: 18px;">See How It Works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <h3>$2.4M+</h3>
+          <p>Saved by users</p>
+        </div>
+        <div class="stat">
+          <h3>50K+</h3>
+          <p>Active users</p>
+        </div>
+        <div class="stat">
+          <h3>4.9★</h3>
+          <p>App Store rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Why SubStop-Manager?</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="feature-icon">🔒</div>
+          <h3>100% Private</h3>
+          <p>No bank linking. Your data stays on your device. We never sell your information.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📊</div>
+          <h3>Visual Dashboard</h3>
+          <p>Beautiful charts showing your spending. See exactly where your money goes each month.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔔</div>
+          <h3>Smart Alerts</h3>
+          <p>Get notified before renewals. Never get surprised by a charge again.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Cancel Router</h3>
+          <p>One-click access to cancel pages. Step-by-step cancellation guides.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">💰</div>
+          <h3>Save Money</h3>
+          <p>Average user saves $200/month by identifying forgotten subscriptions.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <h3>Works Everywhere</h3>
+          <p>Web app works on any device. Access your subscriptions from anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <h2>Simple Pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Free</h3>
+          <div class="price">$0</div>
+          <p style="color: var(--gray);">Get started</p>
+          <ul class="features-list">
+            <li>Log unlimited subscriptions</li>
+            <li>Smart alarm notifications</li>
+            <li>5 days before payment alert</li>
+            <li>24 hours before payment alert</li>
+            <li>Basic dashboard</li>
+          </ul>
+          <a href="#" class="btn btn-outline" style="width: 100%;">Get Started Free</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="badge">Most Popular</div>
+          <h3>Complete</h3>
+          <div class="price">$9.99<span>/month</span></div>
+          <p style="color: var(--gray);">Manage & Cancel</p>
+          <ul class="features-list">
+            <li>Everything in Free</li>
+            <li>One-tap cancel feature</li>
+            <li>Cancel router & guides</li>
+            <li>Advanced analytics</li>
+            <li>Export your data</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="width: 100%;">Get Complete</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Lifetime</h3>
+          <div class="price">$79.99</div>
+          <p style="color: var(--gray);">One-time payment</p>
+          <ul class="features-list">
+            <li>Everything in Complete</li>
+            <li>Pay once, own forever</li>
+            <li>All future updates included</li>
+            <li>VIP support</li>
+            <li>Best value</li>
+          </ul>
+          <a href="#" class="btn btn-outline" style="width: 100%;">Get Lifetime</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Save Money?</h2>
+      <p>Join 50,000+ users who have taken control of their subscriptions</p>
+      <a href="#pricing" class="btn btn-primary" style="font-size: 18px; padding: 16px 40px;">Get Started Free →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 SubStop-Manager. All rights reserved. | Privacy-first subscription tracking.</p>
+    </div>
+  </footer>
+</body>
+</html>

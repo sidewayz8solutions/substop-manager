@@ -1,0 +1,22 @@
+{
+  "scripts": [
+    {
+      "id": "launch-1",
+      "hook": "I built a privacy-first subscription tracker 🛡️",
+      "script": "No bank linking. No data selling. No subscriptions to track your subscriptions. Just a simple, beautiful app that helps you save money. Link in bio.",
+      "cta": "Try it free"
+    },
+    {
+      "id": "launch-2",
+      "hook": "I found $847 in subscriptions I forgot about 💸",
+      "script": "Netflix, Spotify, Adobe, that gym I never go to, some app from 2021... it all adds up. Check your subscriptions before it's too late. App in bio.",
+      "cta": "Find your subs"
+    },
+    {
+      "id": "launch-3",
+      "hook": "Your finance app knows too much about you 🕵️",
+      "script": "Every purchase. Every paycheck. Every account balance. And they're selling it. My app keeps your data on YOUR device. Period.",
+      "cta": "Stay private"
+    }
+  ]
+}

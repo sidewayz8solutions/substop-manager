@@ -1,0 +1,102 @@
+================================================================================
+SUBSTOP.TECH DOMAIN SETUP - ACTION REQUIRED
+================================================================================
+
+YOUR DEPLOYMENT URL:
+https://skillboss-p8e7s3oh-preview.heyboss.live
+
+YOUR DOMAIN:
+substop.tech (via Namecheap)
+
+================================================================================
+EASIEST OPTION: Namecheap DNS (5 minutes)
+================================================================================
+
+1. Log into Namecheap: https://ap.www.namecheap.com/
+
+2. Go to: Domain List → Manage (next to substop.tech)
+
+3. Click: Advanced DNS tab
+
+4. ADD THESE RECORDS:
+
+   Record 1 (for www.substop.tech):
+   ----------------------------------
+   Type:    CNAME Record
+   Host:    www
+   Value:   skillboss-p8e7s3oh-preview.heyboss.live
+   TTL:     Automatic
+
+   Record 2 (redirect root to www):
+   ----------------------------------
+   Type:    URL Redirect Record
+   Host:    @
+   Value:   https://www.substop.tech
+   TTL:     Automatic
+
+5. Click: "Save All Changes"
+
+6. Wait: 5-30 minutes for DNS to propagate
+
+7. Test: Open https://www.substop.tech in browser
+
+================================================================================
+WHAT WILL HAPPEN:
+================================================================================
+
+✅ https://www.substop.tech  → Shows your landing page
+✅ https://substop.tech      → Redirects to www.substop.tech
+
+================================================================================
+ALTERNATIVE: Cloudflare (Better Performance)
+================================================================================
+
+If you want faster loading and free SSL:
+
+1. Sign up: https://dash.cloudflare.com/sign-up
+2. Add site: substop.tech
+3. Copy the 2 Cloudflare nameservers provided
+4. In Namecheap: Change nameservers to Cloudflare ones
+5. In Cloudflare DNS:
+   - Add CNAME: www → skillboss-p8e7s3oh-preview.heyboss.live
+   - Enable Proxy (orange cloud)
+6. Add Page Rule: Redirect substop.tech → https://www.substop.tech
+
+================================================================================
+VERIFICATION:
+================================================================================
+
+After setup, check if working:
+
+Command line:
+  dig www.substop.tech
+
+Online tool:
+  https://whatsmydns.net/#CNAME/www.substop.tech
+
+================================================================================
+TROUBLESHOOTING:
+================================================================================
+
+Problem: Site not loading
+Solution: Wait longer (DNS can take up to 48 hours, usually 5-30 min)
+
+Problem: SSL error
+Solution: If using Cloudflare, set SSL/TLS to "Full"
+
+Problem: 404 error
+Solution: Check CNAME value has no typos or extra spaces
+
+================================================================================
+SUMMARY:
+================================================================================
+
+Deployment URL:  https://skillboss-p8e7s3oh-preview.heyboss.live
+Your Domain:     substop.tech
+Target URL:      https://www.substop.tech
+
+DNS Target:      skillboss-p8e7s3oh-preview.heyboss.live
+
+Go set up those DNS records in Namecheap now! 🚀
+
+================================================================================
